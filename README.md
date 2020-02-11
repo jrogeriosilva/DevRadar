@@ -12,3 +12,12 @@ Na pasta backend Renomeie o **'ENV_EXAMPLE'** para **'.env'** e Insira a URL de 
 ```
 MONGO_URL: 'Sua URL de conexão do mongodb aqui'
 ```
+
+##### Iniciando Backend
+```
+yarn start
+```
+##### Iniciando Frontend Web
+```
+start dev
+```
