@@ -1,5 +1,3 @@
-Este projeto foi desenvolvido durante a 10ª edição da semana Omnistack @rocketseat utilizando **Node.Js**, **ReactJs**
-
 ## Tecnologias Utilizadas
 - [React](https://github.com/facebook/react) -Framework Web
 - [Express](https://expressjs.com/pt-br/) - Http Server
