@@ -1,8 +1,8 @@
-const Dev = require ('../models/Dev');
-const parseStringAsArray = require ('../utils/parseStringAsArray');
+const Dev = require('../models/Dev');
+const parseStringAsArray = require('../utils/parseStringAsArray');
 
 module.exports = {
-  async index ( request, response){
+  async index(request, response) {
     const { latitude, longitude, techs } = request.query;
 
     const techsArray = parseStringAsArray(techs);
@@ -11,17 +11,17 @@ module.exports = {
       techs: {
         $in: techsArray
       },
-      location:{
+      location: {
         $near: {
           $geometry: {
             type: 'Point',
-            coordinates: [latitude, longitude],
+            coordinates: [latitude, longitude]
           },
-          $maxDistance: 10000,
-        },
-      },
+          $maxDistance: 10000
+        }
+      }
     });
 
-    return response.json({ devs } )
+    return response.json({ devs });
   }
-}
+};
